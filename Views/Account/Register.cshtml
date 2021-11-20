@@ -1,0 +1,50 @@
+﻿@model TWSS.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Registro";
+}
+
+<div class="container">
+
+    <h2 class="text-center">Ingrese sus datos</h2>
+
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Correo electrónico" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Contraseña" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Confirmar Contraseña" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-registrar" value="Registrarse" />
+            </div>
+        </div>
+    }
+
+
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

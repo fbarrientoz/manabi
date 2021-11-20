@@ -1,0 +1,85 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap');
+
+body {
+    font-family: 'Rhodium Libre', serif;
+    background-color: #ADF5FF;
+}
+
+.cuadros-menu .col-5 {
+    background-color: #716FCE;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.cuadros-menu img {
+    height: 50px;
+    width: 50px;
+}
+
+.cuadros-menu .col-5 a {
+    color: white;
+    font-size: 12px;
+}
+
+.estilo-login img {
+    width: 263px;
+    height: 165px
+}
+
+.estilo-login h1 {
+    font-size: 24px;
+}
+
+.btn-registrar {
+    background-color: #716FCE;
+    color: white;
+    border-radius: 45px;
+}
+
+.class_input input {
+    background-color: #716FCE;
+}
+
+    .class_input input::placeholder {
+        color: white;
+    }
+
+
+.form-control {
+    border-radius: 45px !important;
+}
+
+
+/*Estilo para agenda*/
+.cuadros-agenda .col-12 {
+    padding: 20px;
+    background-color: #716FCE;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 24PX;
+    border: 0.2px solid #ffffff;
+}
+
+.cuadros-agenda .col-xs-3 {
+    padding: 15px;
+    background-color: #716FCE;
+    border: 0.2px solid #ffffff;
+}
+
+.cuadros-agenda .col-xs-9 {
+    /*padding: 20px;*/
+    background-color: #716FCE;
+    border: 0.2px solid #ffffff;
+}
+
+.cuadros-agenda h3 {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.cuadros-agenda p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
