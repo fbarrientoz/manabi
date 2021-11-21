@@ -9,9 +9,15 @@ namespace manabi.Controllers
     public class PerfilesController : Controller
     {
         // GET: Perfiles
-        public ActionResult Index()
+        public ActionResult Padre()
+        {
+            return View();
+        }
+
+        public ActionResult Kid()
         {
             return View();
         }
     }
+
 }

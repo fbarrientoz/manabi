@@ -5,10 +5,12 @@ body {
     background-color: #ADF5FF;
 }
 
-.cuadros-menu .col-5 {
+.cuadros-menu .col-xs-5 {
     background-color: #716FCE;
     border-radius: 20px;
-    padding: 25px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
 }
 
 .cuadros-menu img {
@@ -16,12 +18,13 @@ body {
     width: 50px;
 }
 
-.cuadros-menu .col-5 a {
+.cuadros-menu .col-xs-5 a {
     color: white;
     font-size: 12px;
 }
 
 .estilo-login img {
+    margin-top: 60px;
     width: 263px;
     height: 165px
 }
@@ -30,10 +33,27 @@ body {
     font-size: 24px;
 }
 
+.btn-login {
+    background-color: #716FCE;
+    border-color: #716FCE;
+    color: white;
+}
+
+
+    .class_input p {
+}
+/*.estilo-login .col-md-12 .col-md-10 {
+    background-color: white;
+}*/
+
+.img {
+    margin-left: 10px;
+}
 .btn-registrar {
     background-color: #716FCE;
     color: white;
-    border-radius: 45px;
+    border-radius: 20px;
+    /*margin-left:110px;*/
 }
 
 .class_input input {
@@ -45,6 +65,11 @@ body {
     }
 
 
+.class_input img {
+    margin-left: 70px;
+    margin-top: 70px;
+}
+
 .form-control {
     border-radius: 45px !important;
 }
@@ -52,24 +77,51 @@ body {
 
 /*Estilo para agenda*/
 .cuadros-agenda .col-12 {
-    padding: 20px;
+    margin-top: 60px;
+    padding: 15px;
     background-color: #716FCE;
     color: #ffffff;
     font-weight: 600;
     font-size: 24PX;
     border: 0.2px solid #ffffff;
+    border-start-start-radius: 15px;
+    border-start-end-radius: 15px;
 }
 
+    .cuadros-agenda .col-12 a {
+        color: #ffffff;
+    }
+
+    .cuadros-dias .col-12 a {
+        color: #ffffff;
+    }
+    .cuadros-dias .col-12 {
+    padding: 20px;
+    background-color: #716FCE;
+    color: white;
+    font-weight: 600;
+    font-size: 24PX;
+    border: 0.2px solid #ffffff;
+    
+}
+
+
+
 .cuadros-agenda .col-xs-3 {
-    padding: 15px;
+    padding: 14px;
     background-color: #716FCE;
     border: 0.2px solid #ffffff;
 }
 
 .cuadros-agenda .col-xs-9 {
-    /*padding: 20px;*/
+    padding: 5px;
     background-color: #716FCE;
     border: 0.2px solid #ffffff;
+}
+
+.cuadros-agenda img {
+    height: 50px;
+    width: 50px;
 }
 
 .cuadros-agenda h3 {
@@ -83,3 +135,27 @@ body {
     font-weight: 600;
     color: #ffffff;
 }
+
+/*Layaout*/
+
+.navbar-header .navbar-toggle {
+    /*background-color: white;*/
+}
+
+.navbar {
+    /*background-color: white;*/
+    color: black;
+}
+
+.navbar-header .navbar-toggle .icon-bar {
+    /* background-color: #716FCE;*/
+}
+
+.body-content p {
+    font-size: 10px;
+}
+
+    .body-content p img {
+        width: 60px;
+        height: 45px
+    }

@@ -1,61 +1,66 @@
 ﻿<div class="container" style="margin-left:15px; margin-top:25px;">
+    <br />
+    <br />
+  
+    <h4>Pictogramas disponibles</h4>
+
     @* Row 1 *@
     <div class="row cuadros-menu text-center">
-        <div class="col-5">
-            <img src="~/Content/Icons/user48px.png" />
+        <div class="col-xs-5">
+            <img src="~/Content/Icons/toothbrush_48px.png" />
             <br />
-            <a>Perfil del Padre</a>
+            <a> @Html.ActionLink("Cepillarse los dientes", "Dientes", "Pictograma")</a>
         </div>
 
-        <div class="col-5 offset-1">
-            <img src="~/Content/Icons/user_48px.png" />
+        <div class="col-xs-5 offset-1">
+            <img src="~/Content/Icons/hair_brush_100px.png" />
             <br />
-            <a>Perfil del niño</a>
+            <a>@Html.ActionLink("Cepillarse el cabello", "Cabello", "Pictograma")</a>
         </div>
     </div>
     <br />
     @* Row 2 *@
     <div class="row cuadros-menu text-center">
-        <div class="col-5">
-            <img src="~/Content/Icons/puzzle_52px.png" />
+        <div class="col-xs-5">
+            <img src="~/Content/Icons/shower_64px.png" />
             <br />
-            <a>Pictograma</a>
+            <a>@Html.ActionLink("Bañarse", "Bañarse", "Pictograma")</a>
         </div>
 
-        <div class="col-5 offset-1">
-            <img src="~/Content/Icons/book_48px.png" />
+        <div class="col-xs-5 offset-1">
+            <img src="~/Content/Icons/food_bar_100px.png" />
             <br />
-            <a>Agenda</a>
+            <a>Comer</a>
         </div>
     </div>
     <br />
     @* Row 3 *@
     <div class="row cuadros-menu text-center">
-        <div class="col-5">
-            <img src="~/Content/Icons/ticket_60px.png" />
+        <div class="col-xs-5">
+            <img src="~/Content/Icons/books_60px.png" />
             <br />
-            <a>Suscripción</a>
+            <a>Ir a la escuela</a>
         </div>
 
-        <div class="col-5 offset-1">
-            <img src="~/Content/Icons/light_48px.png" />
+        <div class="col-xs-5 offset-1">
+            <img src="~/Content/Icons/sleeping_in_bed_60px.png" />
             <br />
-            <a>Ayuda</a>
+            <a>Dormir</a>
         </div>
     </div>
     <br />
     @* Row 4  *@
     <div class="row cuadros-menu text-center">
-        <div class="col-5">
-            <img src="~/Content/Icons/automatic_48px.png" />
+        <div class="col-xs-5">
+            <img src="~/Content/Icons/home_60px.png" />
             <br />
-            <a>Alarmas</a>
+            <a>Ir a casa</a>
         </div>
 
-        <div class="col-5 offset-1">
-            <img src="~/Content/Icons/exit_64px.png" />
+        <div class="col-xs-5 offset-1">
+            <img src="~/Content/Icons/game_controller_52px.png" />
             <br />
-            <a>Cerrar Sesión</a>
+            <a>Jugar</a>
         </div>
     </div>
 </div>

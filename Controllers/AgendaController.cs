@@ -13,5 +13,9 @@ namespace manabi.Controllers
         {
             return View();
         }
+        public ActionResult Calendario()
+        {
+            return View();
+        }
     }
 }

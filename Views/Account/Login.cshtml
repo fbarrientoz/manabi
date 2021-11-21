@@ -1,4 +1,4 @@
-﻿@using TWSS.Models
+﻿@using manabi.Models
 @model LoginViewModel
 @{
     ViewBag.Title = "Iniciar sesión";
@@ -34,16 +34,16 @@
                     <br />
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Iniciar sesión" class="btn btn-danger" />
+                            <input type="submit" value="Iniciar sesión" class="btn btn-login" />
                         </div>
                     </div>
-                    <p>ó <br /> Inicia sesión con Google</p>
-                    <img style="width:45px; height:45px;" src="~/Content/Icons/google_icon.png" />
+                    <h5>ó <br /> Inicia sesión con Google</h5>
+                    <img style="width:45px; height:45px; margin-top:20px;" src="~/Content/Icons/google_icon.png" />
 
 
-                    <p>
+                    <h5>
                         ¿Nuevo Usuario?, @Html.ActionLink("Registrarte aquí", "Register")
-                    </p>
+                    </h5>
 
                     @* Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
                         <p>
