@@ -1,0 +1,56 @@
+﻿@model manabi.Models.Agendum
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Agendum</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dia1.Dia1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dia1.Dia1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora1.Hora1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora1.Hora1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pictograma.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pictograma.Nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

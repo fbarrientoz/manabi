@@ -10,120 +10,107 @@ using manabi.Models;
 
 namespace manabi.Controllers
 {
-    public class AgendaController : Controller
+    public class PictogramasAdminController : Controller
     {
         private TWSSEntities db = new TWSSEntities();
 
-        // GET: Agenda
+        // GET: PictogramasAdmin
         public ActionResult Index()
         {
-            var agenda = db.Agenda.Include(a => a.Dia1).Include(a => a.Hora1).Include(a => a.Pictograma);
-            return View(agenda.ToList());
+            return View(db.Pictogramas.ToList());
         }
 
-        // GET: Agenda/Details/5
+        // GET: PictogramasAdmin/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Agendum agendum = db.Agenda.Find(id);
-            if (agendum == null)
+            Pictograma pictograma = db.Pictogramas.Find(id);
+            if (pictograma == null)
             {
                 return HttpNotFound();
             }
-            return View(agendum);
+            return View(pictograma);
         }
 
-        // GET: Agenda/Create
+        // GET: PictogramasAdmin/Create
         public ActionResult Create()
         {
-            ViewBag.dia = new SelectList(db.Dias, "Id", "Dia1");
-            ViewBag.hora = new SelectList(db.Horas, "Id", "Hora1");
-            ViewBag.fk_pictograma = new SelectList(db.Pictogramas, "Id", "Nombre");
             return View();
         }
 
-        // POST: Agenda/Create
+        // POST: PictogramasAdmin/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,fk_pictograma,hora,descripcion,dia")] Agendum agendum)
+        public ActionResult Create([Bind(Include = "Id,Nombre,Descripcion,Foto")] Pictograma pictograma)
         {
             if (ModelState.IsValid)
             {
-                db.Agenda.Add(agendum);
+                db.Pictogramas.Add(pictograma);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.dia = new SelectList(db.Dias, "Id", "Dia1", agendum.dia);
-            ViewBag.hora = new SelectList(db.Horas, "Id", "Hora1", agendum.hora);
-            ViewBag.fk_pictograma = new SelectList(db.Pictogramas, "Id", "Nombre", agendum.fk_pictograma);
-            return View(agendum);
+            return View(pictograma);
         }
 
-        // GET: Agenda/Edit/5
+        // GET: PictogramasAdmin/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Agendum agendum = db.Agenda.Find(id);
-            if (agendum == null)
+            Pictograma pictograma = db.Pictogramas.Find(id);
+            if (pictograma == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.dia = new SelectList(db.Dias, "Id", "Dia1", agendum.dia);
-            ViewBag.hora = new SelectList(db.Horas, "Id", "Hora1", agendum.hora);
-            ViewBag.fk_pictograma = new SelectList(db.Pictogramas, "Id", "Nombre", agendum.fk_pictograma);
-            return View(agendum);
+            return View(pictograma);
         }
 
-        // POST: Agenda/Edit/5
+        // POST: PictogramasAdmin/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,fk_pictograma,hora,descripcion,dia")] Agendum agendum)
+        public ActionResult Edit([Bind(Include = "Id,Nombre,Descripcion,Foto")] Pictograma pictograma)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(agendum).State = EntityState.Modified;
+                db.Entry(pictograma).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.dia = new SelectList(db.Dias, "Id", "Dia1", agendum.dia);
-            ViewBag.hora = new SelectList(db.Horas, "Id", "Hora1", agendum.hora);
-            ViewBag.fk_pictograma = new SelectList(db.Pictogramas, "Id", "Nombre", agendum.fk_pictograma);
-            return View(agendum);
+            return View(pictograma);
         }
 
-        // GET: Agenda/Delete/5
+        // GET: PictogramasAdmin/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Agendum agendum = db.Agenda.Find(id);
-            if (agendum == null)
+            Pictograma pictograma = db.Pictogramas.Find(id);
+            if (pictograma == null)
             {
                 return HttpNotFound();
             }
-            return View(agendum);
+            return View(pictograma);
         }
 
-        // POST: Agenda/Delete/5
+        // POST: PictogramasAdmin/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Agendum agendum = db.Agenda.Find(id);
-            db.Agenda.Remove(agendum);
+            Pictograma pictograma = db.Pictogramas.Find(id);
+            db.Pictogramas.Remove(pictograma);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

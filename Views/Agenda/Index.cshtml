@@ -1,91 +1,51 @@
-﻿<div class="container">
-    @* Row 1 *@
-    <div class="row cuadros-agenda text-center">
-        <div class="col-12">
-            Lunes
-        </div>
-    </div>
+﻿@model IEnumerable<manabi.Models.Agendum>
 
-    @*Row 2*@
-    <div class="row cuadros-agenda text-center">
-        <div class="col-xs-3">
-            <img src="~/Content/Icons/shower_64px.png" />
-        </div>
-        <div class="col-xs-9">
-            <h3>7:00am</h3>
-            <p>Bañarme</p>
-        </div>
-    </div>
+@{
+    ViewBag.Title = "Index";
+}
 
-    @*Row 3*@
+<h2>Index</h2>
 
-    <div class="row cuadros-agenda text-center">
-        <div class="col-xs-3">
-            <img src="~/Content/Icons/toothbrush_48px.png" />
-        </div>
-        <div class="col-xs-9">
-            <h3>7:30am</h3>
-            <p>Cepillar mis dientes</p>
-        </div>
-    </div>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dia1.Dia1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hora1.Hora1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pictograma.Nombre)
+        </th>
+        <th></th>
+    </tr>
 
-    @*Row 4*@
-    <div class="row cuadros-agenda text-center">
-        <div class="col-xs-3">
-            <img src="~/Content/Icons/hair_brush_100px.png" />
-        </div>
-        <div class="col-xs-9">
-            <h3>7:40am</h3>
-            <p>Cepillar mi cabello</p>
-        </div>
-    </div>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           <a class="btn btn-default" href="@item.descripcion">Ver</a> @*@Html.DisplayFor(modelItem => item.descripcion)*@
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dia1.Dia1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hora1.Hora1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pictograma.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
 
-    @*Row 5*@
-    <div class="row cuadros-agenda text-center">
-        <div class="col-xs-3">
-            <img src="~/Content/Icons/food_bar_100px.png" />
-        </div>
-        <div class="col-xs-9">
-            <h3>8:00am</h3>
-            <p>Desayunar</p>
-        </div>
-    </div>
-
-    @*Row 6*@
-    <div class="row cuadros-agenda text-center">
-        <div class="col-xs-3">
-            <img src="~/Content/Icons/books_60px.png" />
-        </div>
-        <div class="col-xs-9">
-            <h3>9:00am</h3>
-            <p>Ir a mi escuela</p>
-        </div>
-    </div>
-
-    @*Row 7*@
-    <div class="row cuadros-agenda text-center">
-        <div class="col-xs-3">
-            <img src="~/Content/Icons/home_60px.png" />
-        </div>
-        <div class="col-xs-9">
-            <h3>2:00pm</h3>
-            <p>Volver a mi casa</p>
-        </div>
-    </div>
-
-    @*Row 5*@
-    <div class="row cuadros-agenda text-center">
-        <div class="col-xs-3">
-            <img src="~/Content/Icons/food_bar_100px.png" />
-        </div>
-        <div class="col-xs-9">
-            <h3>2:30pm</h3>
-            <p>Comer</p>
-        </div>
-    </div>
-
-    <a href="~/Views/Agenda/Index.cshtml">~/Views/Agenda/Index.cshtml</a>
-
-
-</div>
-
+</table>
