@@ -255,6 +255,7 @@
     <Content Include="Content\img\Foto_Perfil.png" />
     <Content Include="Content\img\manabi.jpeg" />
     <Content Include="Content\img\perfil_nino.png" />
+    <Content Include="Content\img\question_mark_96px.png" />
     <Content Include="Content\img\TWSS.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
