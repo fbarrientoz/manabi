@@ -293,6 +293,7 @@
     <Content Include="Content\img\Foto_Perfil.png" />
     <Content Include="Content\img\manabi.jpeg" />
     <Content Include="Content\img\perfil_nino.png" />
+    <Content Include="Content\img\question_mark_96px.png" />
     <Content Include="Content\img\TWSS.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -339,8 +340,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
