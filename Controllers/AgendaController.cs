@@ -50,7 +50,7 @@ namespace manabi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,fk_pictograma,hora,descripcion,dia")] Agendum agendum)
+        public ActionResult Create([Bind(Include = "Id,fk_pictograma,Hora,Descripcion,Dia")] Agendum agendum)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace manabi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,fk_pictograma,hora,descripcion,dia")] Agendum agendum)
+        public ActionResult Edit([Bind(Include = "Id,fk_pictograma,Hora,Descripcion,Dia")] Agendum agendum)
         {
             if (ModelState.IsValid)
             {

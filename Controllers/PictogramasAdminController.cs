@@ -46,10 +46,17 @@ namespace manabi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nombre,Descripcion,Foto")] Pictograma pictograma)
+        public ActionResult Create([Bind(Include = "Id,Nombre,Descripcion,Foto")] Pictograma pictograma, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                if(file !=null)
+                {
+                    string ImageName = System.IO.Path.GetFileName(file.FileName);
+                    string physicalPath = Server.MapPath("~/Content/img/Pictogramas/" + ImageName);
+                    file.SaveAs(physicalPath);
+                    pictograma.Foto = ImageName;
+                }
                 db.Pictogramas.Add(pictograma);
                 db.SaveChanges();
                 return RedirectToAction("Index");

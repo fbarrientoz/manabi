@@ -324,7 +324,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Agendaa___\Index.cshtml" />
+    <Content Include="Views\Agenda___\Index.cshtml" />
     <Content Include="Views\Perfiles\Padre.cshtml" />
     <Content Include="Views\Pictograma\Index.cshtml" />
     <Content Include="Views\Perfiles\Kid.cshtml" />
@@ -335,7 +335,7 @@
     <Content Include="Views\Pictograma\Casa.cshtml" />
     <Content Include="Views\Pictograma\Escuela.cshtml" />
     <Content Include="Views\Pictograma\Cabello.cshtml" />
-    <Content Include="Views\Agendaa___\Calendario.cshtml" />
+    <Content Include="Views\Agenda___\Calendario.cshtml" />
     <Content Include="Views\Agenda\Create.cshtml" />
     <Content Include="Views\Agenda\Delete.cshtml" />
     <Content Include="Views\Agenda\Details.cshtml" />
@@ -349,6 +349,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\Pictogramas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
