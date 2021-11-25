@@ -41,5 +41,13 @@ namespace manabi.Controllers
         {
             return View();
         }
+        public ActionResult Dormir()
+        {
+            return View();
+        }
+        public ActionResult Jugar()
+        {
+            return View();
+        }
     }
 }
