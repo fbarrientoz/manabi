@@ -51,16 +51,10 @@
     <br />
     @* Row 4  *@
     <div class="row cuadros-menu text-center">
-        <div class="col-xs-5">
-            <img src="~/Content/Icons/automatic_48px.png" />
-            <br />
-            <a>Alarmas</a>
-        </div>
-
         <div class="col-xs-5 offset-1">
             <img src="~/Content/Icons/exit_64px.png" />
             <br />
-            <a>Cerrar Sesión</a>
+            <a>@Html.ActionLink("Cerrar Sesión", "Login", "Account" )</a>
         </div>
     </div>
 </div>
